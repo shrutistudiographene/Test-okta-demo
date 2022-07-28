@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/layout/Navbar';
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { LoginCallback, Security } from '@okta/okta-react';
 import Home from './components/pages/Home';
@@ -37,6 +37,7 @@ const App = () => {
         <div className='container'>
           <Routes>
             <Route path='/' exact element={<Home />} />
+            <Route path='/login' element={<Login />} />
             <Route path='/Dashboard' exact element={<SecureRoute path='/Dashboard' element={<Dashboard />} /> } />
             <Route path='/login/callback' component={LoginCallback} />
           </Routes>

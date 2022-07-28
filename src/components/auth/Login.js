@@ -18,7 +18,7 @@ const Login = ({ config }) => {
   }
     console.log('in Login');
   return authState.isAuthenticated ?
-    <Navigate to='/'/> :
+    <Navigate to='/Dashboad'/> :
     <SignInWidget config={config} onSuccess={onSuccess} onError={onError}/>;
 };
 

@@ -15,5 +15,6 @@ export default {
     redirectUri: `${window.location.origin}/login/callback`,
     scopes: ['openid', 'profile', 'email'],
     useInteractionCodeFlow: true,
+    //logo: 'logo.png'
   },
 };
